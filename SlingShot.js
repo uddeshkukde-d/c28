@@ -7,15 +7,18 @@ class SlingShot{
             length: 10
         }
         this.pointB = pointB
-        this.SlingShot= Constraint.create(options);
-        World.add(world, this.SlingShot);
+        this.Sling= Constraint.create(options);
+        World.add(world, this.Sling);
+    }
+
+    fly(){
+        
     }
 
       display(){
-            var pointA = this.SlingShot.bodyA.position;
-            var pointB = this.pointB;
+           
             strokeWeight(4);
-            line(pointA.x, pointA.y, pointB.x, pointB.y);
+            line(this.Sling.bodyA.position.x,this.Sling.bodyA.position.y,this.pointB.x,this.pointB.y);
         
     }
     
